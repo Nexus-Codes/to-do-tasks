@@ -14,6 +14,13 @@ def on_btn_click():
     tasks_frame = Frame(root, bg="#e8e8e8")
     tasks_frame.pack(pady=5, padx=80, fill=X)
 
+    #checkbox
+    checkbox_var = IntVar()
+    checkbox = Checkbutton(tasks_frame, variable=checkbox_var, bg="#e8e8e8", relief="flat", \
+                            highlightbackground="black", highlightthickness=2)
+    checkbox.pack(side=LEFT)
+    checkbox.config(font=("verdana", 14), )
+
     task1 = Label(tasks_frame, text=task, bg="#e8e8e8")
     task1.pack(anchor='w', padx=(12), pady=(10), side=LEFT)
     task1.config(font=("verdana", 12))
@@ -23,6 +30,8 @@ def on_btn_click():
     delete_1 = Button(tasks_frame, text="Delete", fg="white", command=lambda: on_delete_btn(tasks_frame))
     delete_1.pack(side=RIGHT, padx=(0, 10))
     delete_1.config(background="red", font=("verdana", 10))
+
+
 
 root.title("To Do Lists")
 root.geometry('730x470')
@@ -45,5 +54,7 @@ add_btn.pack(side=LEFT, ipadx=13, ipady=3)
 add_btn.config(font=("verdana", 14))
 
 root.bind('<Return>', lambda event: on_btn_click())
+
+
 
 root.mainloop()
