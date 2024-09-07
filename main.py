@@ -37,7 +37,6 @@ root.title("To Do Lists")
 root.geometry('730x470')
 root.configure(background="#f3f3f3")
 root.resizable(0, 0)
-root.iconbitmap('logo1.ico')
 
 to_do_tasks = Label(root, text="To Do Tasks", fg="black", bg="#f3f3f3")
 to_do_tasks.pack(pady=(20, 1), padx=(86, 10), anchor="w")
